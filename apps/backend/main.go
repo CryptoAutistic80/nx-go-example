@@ -1,15 +1,25 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+
+	"nx-go-example/backend/handlers"
+	"nx-go-example/backend/services"
+	"nx-go-example/backend/utils"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello from Go backend!")
-}
-
 func main() {
-	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	const port = ":8080"
+
+	services.InitOpenAI()
+	http.HandleFunc("/query", handlers.QueryHandler)
+
+	// Print server info
+	utils.PrintServerInfo(port)
+
+	// Start server
+	if err := http.ListenAndServe(port, nil); err != nil {
+		log.Fatal(err)
+	}
 }
