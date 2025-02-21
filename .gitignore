@@ -62,6 +62,7 @@ dist/
 *.test
 *.out
 go.work
+go-open-ai-sdk/
 
 # IDE
 .idea/
@@ -75,3 +76,7 @@ Thumbs.db
 
 # Docker
 .docker/
+
+# Environment variables
+.env
+.env.local
