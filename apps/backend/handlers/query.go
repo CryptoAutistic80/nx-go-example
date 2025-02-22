@@ -20,7 +20,13 @@ func QueryHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response, err := services.QueryOpenAI(req.Query)
+	// Validate required fields
+	if req.Query == "" || req.Model == "" {
+		json.NewEncoder(w).Encode(models.QueryResponse{Error: "Query and model are required"})
+		return
+	}
+
+	response, err := services.QueryOpenAI(req.Query, req.Model)
 	if err != nil {
 		json.NewEncoder(w).Encode(models.QueryResponse{Error: err.Error()})
 		return
