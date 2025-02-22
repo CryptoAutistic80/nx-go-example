@@ -3,11 +3,11 @@
 import { useRouter } from 'next/navigation';
 import styles from '../../styles/ChatLayout.module.css';
 
-export default function ChatLayout({
-  children,
-}: {
+interface ChatLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function ChatLayout({ children }: ChatLayoutProps) {
   const router = useRouter();
 
   return (
@@ -18,6 +18,12 @@ export default function ChatLayout({
           onClick={() => router.push('/')}
         >
           ← Back
+        </button>
+        <button 
+          className={styles.newChatButton}
+          onClick={() => window.location.reload()}
+        >
+          New Chat
         </button>
       </div>
       {children}
