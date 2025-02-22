@@ -1,0 +1,32 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backButton, .newChatButton {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #007AFF;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.backButton:hover, .newChatButton:hover {
+  opacity: 0.7;
+}
+
+.newChatButton {
+  border: 1px solid #007AFF;
+  border-radius: 0.5rem;
+} 

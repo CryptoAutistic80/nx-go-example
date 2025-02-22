@@ -1,0 +1,47 @@
+.bubble {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  max-width: 70%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.2rem;
+  position: relative;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.user {
+  background-color: #007AFF;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.assistant {
+  background-color: #E9ECEF;
+  color: #212529;
+  margin-right: auto;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.content {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 0.4rem;
+  align-self: flex-end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

@@ -1,0 +1,23 @@
+.message {
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #007AFF;
+  color: white;
+  margin-left: auto;
+}
+
+.assistant {
+  background-color: #F0F0F0;
+  color: black;
+  margin-right: auto;
+}
+
+.messageContent {
+  word-break: break-word;
+} 
