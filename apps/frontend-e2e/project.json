@@ -4,7 +4,35 @@
   "projectType": "application",
   "sourceRoot": "apps/frontend-e2e/src",
   "tags": [],
-  "implicitDependencies": ["frontend"],
+  "implicitDependencies": ["frontend", "backend"],
   "// targets": "to see all targets run: nx show project frontend-e2e --web",
-  "targets": {}
+  "targets": {
+    "start-backend": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx serve backend",
+        "background": true
+      }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/frontend-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "baseUrl": "http://localhost:4200",
+        "devServerTarget": "frontend:serve",
+        "parallel": false,
+        "dependsOn": ["start-backend"]
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "frontend:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
 }

@@ -28,9 +28,10 @@
       }
     },
     {
-      "plugin": "@nx/playwright/plugin",
+      "plugin": "@nx/cypress/plugin",
       "options": {
-        "targetName": "e2e"
+        "targetName": "e2e",
+        "configFile": "cypress.config.ts"
       }
     },
     {

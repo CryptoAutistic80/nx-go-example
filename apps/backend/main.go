@@ -8,9 +8,17 @@ import (
 	"nx-go-example/backend/services"
 )
 
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("OK"))
+}
+
 func main() {
 	// Initialize OpenAI
 	services.InitOpenAI()
+
+	// Health check endpoint
+	http.HandleFunc("/health", healthHandler)
 
 	// Public route for getting JWT token
 	http.HandleFunc("/auth/token", handlers.GetTokenHandler)
