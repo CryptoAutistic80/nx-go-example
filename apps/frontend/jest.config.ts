@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default {
   displayName: 'frontend',
   preset: '../../jest.preset.js',
@@ -7,4 +8,13 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/frontend',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(@testing-library|next|react|react-dom)/)',
+  ],
 };
