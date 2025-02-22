@@ -13,6 +13,7 @@ export default {
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^react-markdown$': '<rootDir>/src/app/chat/__mocks__/react-markdown.tsx',
   },
   transformIgnorePatterns: [
     '/node_modules/(?!(@testing-library|next|react|react-dom)/)',

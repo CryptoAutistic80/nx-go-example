@@ -12,19 +12,6 @@ interface Message {
   isStreaming?: boolean;
 }
 
-interface ChatResponse {
-  chatId: string;
-  message: Message;
-  error?: string;
-}
-
-interface ChatRequest {
-  chatId?: string;
-  message: string;
-  model: string;
-  token?: string;
-}
-
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -42,8 +29,8 @@ export default function Chat() {
         const response = await fetch('http://localhost:8080/auth/token');
         const data = await response.json();
         setToken(data.token);
-      } catch (error) {
-        console.error('Failed to get token:', error);
+      } catch (err) {
+        console.error('Failed to get token:', err);
       }
     };
     getToken();

@@ -1,11 +1,11 @@
-import { ChatRequest, ChatResponse } from '../types/chat';
+import { ChatRequest, ChatResponse, ToolCallData } from '../types/chat';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080';
 
 export const streamChat = async (
   request: ChatRequest,
   onMessage: (content: string) => void,
-  onToolCall: (tool: any) => void,
+  onToolCall: (tool: ToolCallData) => void,
   onError: (error: string) => void,
   onComplete: () => void
 ): Promise<void> => {
@@ -65,8 +65,9 @@ export const streamChat = async (
                   onMessage(content);
                 }
             }
-          } catch (e) {
+          } catch (error) {
             // If it's not valid JSON, treat it as plain text
+            console.debug('Failed to parse JSON:', error);
             onMessage(content);
           }
         }
@@ -87,7 +88,8 @@ export const streamChat = async (
         } else {
           onMessage(content);
         }
-      } catch (e) {
+      } catch (error) {
+        console.debug('Failed to parse JSON:', error);
         onMessage(content);
       }
     }
