@@ -10,10 +10,17 @@ interface Message {
   timestamp: string;
 }
 
+interface ChatResponse {
+  chatId: string;
+  message: Message;
+  error?: string;
+}
+
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [model, setModel] = useState('gpt-4o');
+  const [chatId, setChatId] = useState<string>('');
   const chatWindowRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -30,8 +37,7 @@ export default function Chat() {
     e.preventDefault();
     if (!input.trim()) return;
 
-    const timestamp = new Date().toLocaleTimeString();
-    const userMessage = { content: input, isUser: true, timestamp };
+    const userMessage = { content: input, isUser: true, timestamp: new Date().toLocaleTimeString() };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
 
@@ -42,12 +48,13 @@ export default function Chat() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: input,
+          chatId: chatId,
+          message: input,
           model: model,
         }),
       });
 
-      const data = await response.json();
+      const data: ChatResponse = await response.json();
       
       if (data.error) {
         setMessages(prev => [...prev, { 
@@ -56,11 +63,11 @@ export default function Chat() {
           timestamp: new Date().toLocaleTimeString() 
         }]);
       } else {
-        setMessages(prev => [...prev, { 
-          content: data.response, 
-          isUser: false, 
-          timestamp: new Date().toLocaleTimeString() 
-        }]);
+        // Update chat ID if this is a new conversation
+        if (!chatId) {
+          setChatId(data.chatId);
+        }
+        setMessages(prev => [...prev, data.message]);
       }
     } catch (error) {
       setMessages(prev => [...prev, { 
@@ -71,8 +78,26 @@ export default function Chat() {
     }
   };
 
+  const startNewChat = () => {
+    setChatId('');
+    setMessages([]);
+  };
+
   return (
     <div className={styles.container}>
+      <div className={styles.header}>
+        <select
+          className={styles.modelSelect}
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+        >
+          <option value="gpt-4o">GPT-4o</option>
+          <option value="gpt-4o-mini">GPT-4o-mini</option>
+        </select>
+        <button onClick={startNewChat} className={styles.newChatButton}>
+          New Chat
+        </button>
+      </div>
       <div className={styles.chatWindow} ref={chatWindowRef}>
         {messages.map((message, index) => (
           <MessageBubble
@@ -84,14 +109,6 @@ export default function Chat() {
         ))}
       </div>
       <form onSubmit={handleSubmit} className={styles.inputContainer}>
-        <select
-          className={styles.modelSelect}
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-        >
-          <option value="gpt-4o">GPT-4o</option>
-          <option value="gpt-4o-mini">GPT-4o-mini</option>
-        </select>
         <input
           type="text"
           value={input}

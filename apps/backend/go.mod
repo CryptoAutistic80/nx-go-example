@@ -2,7 +2,10 @@ module nx-go-example/backend
 
 go 1.24.0
 
-require github.com/openai/openai-go v0.1.0-alpha.59
+require (
+	github.com/google/uuid v1.6.0
+	github.com/openai/openai-go v0.1.0-alpha.59
+)
 
 require (
 	github.com/tidwall/gjson v1.18.0 // indirect
