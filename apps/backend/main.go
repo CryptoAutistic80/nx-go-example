@@ -3,23 +3,19 @@ package main
 import (
 	"log"
 	"net/http"
-
+	"nx-go-example/backend/auth"
 	"nx-go-example/backend/handlers"
-	"nx-go-example/backend/services"
-	"nx-go-example/backend/utils"
 )
 
 func main() {
-	const port = ":8080"
+	// Public route for getting JWT token
+	http.HandleFunc("/auth/token", handlers.GetTokenHandler)
 
-	services.InitOpenAI()
-	http.HandleFunc("/query", handlers.QueryHandler)
+	// Protected route for chat
+	http.HandleFunc("/query", auth.AuthMiddleware(handlers.QueryHandler))
 
-	// Print server info
-	utils.PrintServerInfo(port)
-
-	// Start server
-	if err := http.ListenAndServe(port, nil); err != nil {
+	log.Printf("Server starting on :8080")
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
 }

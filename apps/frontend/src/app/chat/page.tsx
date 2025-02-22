@@ -21,7 +21,22 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const [model, setModel] = useState('gpt-4o');
   const [chatId, setChatId] = useState<string>('');
+  const [token, setToken] = useState<string>('');
   const chatWindowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Get JWT token when component mounts
+    const getToken = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/auth/token');
+        const data = await response.json();
+        setToken(data.token);
+      } catch (error) {
+        console.error('Failed to get token:', error);
+      }
+    };
+    getToken();
+  }, []);
 
   const scrollToBottom = () => {
     if (chatWindowRef.current) {
@@ -35,7 +50,7 @@ export default function Chat() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || !token) return;
 
     const userMessage = { content: input, isUser: true, timestamp: new Date().toLocaleTimeString() };
     setMessages(prev => [...prev, userMessage]);
@@ -46,6 +61,7 @@ export default function Chat() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
         },
         body: JSON.stringify({
           chatId: chatId,
@@ -82,6 +98,10 @@ export default function Chat() {
     setChatId('');
     setMessages([]);
   };
+
+  if (!token) {
+    return <div className={styles.container}>Loading...</div>;
+  }
 
   return (
     <div className={styles.container}>

@@ -34,4 +34,10 @@ EXPOSE 3000
 
 # Start the Next.js app
 WORKDIR /app/apps/frontend
-CMD ["../../node_modules/.bin/next", "start"] 
+
+# Use shell form to allow environment variable evaluation
+CMD if [ "$NODE_ENV" = "production" ]; then \
+        ../../node_modules/.bin/next start; \
+    else \
+        ../../node_modules/.bin/next dev; \
+    fi 

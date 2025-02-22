@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"nx-go-example/backend/models"
-	"os"
 	"sync"
 	"time"
 
@@ -107,10 +106,10 @@ func HandleChatMessage(chatID string, message string, modelName string) (*models
 		return nil, err
 	}
 
-	// Get API key from environment
-	apiKey := os.Getenv("OPENAI_API_KEY")
+	// Get API key from secrets service
+	apiKey := GetOpenAIToken()
 	if apiKey == "" {
-		return nil, fmt.Errorf("OPENAI_API_KEY environment variable is not set")
+		return nil, fmt.Errorf("OpenAI API key is not set")
 	}
 
 	// Convert chat history to OpenAI format
