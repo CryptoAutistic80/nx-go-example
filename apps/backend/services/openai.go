@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"sync"
 
 	"nx-go-example/backend/config"
 
@@ -12,7 +13,10 @@ import (
 	"github.com/openai/openai-go/option"
 )
 
-var client *openai.Client
+var (
+	openaiClient *openai.Client
+	once         sync.Once
+)
 
 // Supported models
 const (
@@ -20,10 +24,21 @@ const (
 	ModelGPT4oMini = "gpt-4o-mini"
 )
 
+// GetOpenAIClient returns a singleton instance of the OpenAI client
+func GetOpenAIClient() *openai.Client {
+	once.Do(func() {
+		apiKey := os.Getenv("OPENAI_API_KEY")
+		if apiKey == "" {
+			panic("OPENAI_API_KEY environment variable is not set")
+		}
+		openaiClient = openai.NewClient(
+			option.WithAPIKey(apiKey),
+		)
+	})
+	return openaiClient
+}
+
 func InitOpenAI() {
-	client = openai.NewClient(
-		option.WithAPIKey(os.Getenv("OPENAI_API_KEY")),
-	)
 	if err := config.LoadMessages(); err != nil {
 		log.Printf("Failed to load messages: %v", err)
 	}
@@ -41,7 +56,7 @@ func QueryOpenAI(query string, model string) (string, error) {
 		return "", fmt.Errorf("invalid model: must be %s or %s", ModelGPT4o, ModelGPT4oMini)
 	}
 
-	completion, err := client.Chat.Completions.New(context.Background(), openai.ChatCompletionNewParams{
+	completion, err := openaiClient.Chat.Completions.New(context.Background(), openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{
 			openai.SystemMessage(config.GetSystemMessage("default")),
 			openai.UserMessage(query),

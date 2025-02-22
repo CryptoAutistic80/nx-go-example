@@ -1,38 +1,128 @@
 .bubble {
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
   max-width: 70%;
-  padding: 0.8rem 1.2rem;
-  border-radius: 1.2rem;
   position: relative;
   animation: fadeIn 0.3s ease-in;
 }
 
 .user {
-  background-color: #007AFF;
+  background-color: #007bff;
   color: white;
   margin-left: auto;
   border-bottom-right-radius: 0.4rem;
 }
 
 .assistant {
-  background-color: #E9ECEF;
-  color: #212529;
+  background-color: #f1f1f1;
+  color: black;
   margin-right: auto;
   border-bottom-left-radius: 0.4rem;
 }
 
 .content {
   word-wrap: break-word;
-  white-space: pre-wrap;
+  min-height: 20px;
+}
+
+/* Markdown styles */
+.content :global(p) {
+  margin: 0.5em 0;
+}
+
+.content :global(pre) {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.5em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.content :global(code) {
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.content :global(pre code) {
+  background-color: transparent;
+  padding: 0;
+}
+
+.content :global(ul), .content :global(ol) {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.content :global(blockquote) {
+  margin: 0.5em 0;
+  padding-left: 1em;
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.user .content :global(blockquote) {
+  border-left-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .timestamp {
-  font-size: 0.7rem;
-  opacity: 0.7;
-  margin-top: 0.4rem;
-  align-self: flex-end;
+  font-size: 0.7em;
+  color: #666;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.typingIndicator {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  background-color: #666;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -43,5 +133,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 } 
