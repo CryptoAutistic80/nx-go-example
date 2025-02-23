@@ -32,7 +32,12 @@ jobs:
           node-version: 20
           cache: 'npm'
 
+      # Install dependencies
       - run: npm ci --legacy-peer-deps
+      
+      # Install Nx globally
+      - run: npm install -g nx@latest
+      
       - run: npx playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
