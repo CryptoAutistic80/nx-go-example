@@ -37,72 +37,72 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "README.md",
-        "hash": "9119692498511767436"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "5797461130236409694"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10402636626331045609"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
       },
       {
         "file": "Dockerfile.backend",
         "hash": "17707641290880362758"
       },
       {
+        "file": "nx.json",
+        "hash": "10402636626331045609"
+      },
+      {
         "file": "tsconfig.base.json",
         "hash": "16936441711144470533"
-      },
-      {
-        "file": "package.json",
-        "hash": "1637564527770596878"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3494843969422251966"
-      },
-      {
-        "file": "Dockerfile.frontend",
-        "hash": "7385235635086431088"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "3143642416999849178"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
       },
       {
         "file": "docker-compose.yml",
         "hash": "985606112782525233"
       },
       {
-        "file": ".env.sample",
-        "hash": "13484174469426106050"
+        "file": ".gitignore",
+        "hash": "17337379314732916728"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "package.json",
+        "hash": "1637564527770596878"
+      },
+      {
+        "file": "Dockerfile.frontend",
+        "hash": "7030463533232243600"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "3143642416999849178"
       },
       {
         "file": "eslint.config.mjs",
         "hash": "3462096019013144053"
       },
       {
-        "file": ".gitignore",
-        "hash": "17337379314732916728"
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "README.md",
+        "hash": "9119692498511767436"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".env.sample",
+        "hash": "13484174469426106050"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "5797461130236409694"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
       }
     ],
     "projectFileMap": {

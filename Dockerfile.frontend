@@ -23,6 +23,7 @@ WORKDIR /app
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/nx.json ./
 COPY --from=builder /app/tsconfig.base.json ./
+COPY --from=builder /app/eslint.config.mjs ./
 COPY --from=builder /app/apps/frontend ./apps/frontend
 COPY --from=builder /app/node_modules ./node_modules
 
