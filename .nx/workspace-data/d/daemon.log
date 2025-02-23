@@ -12487,3 +12487,40 @@ Error: LOCK_FILES_CHANGED
 [NX Daemon Server] - 2025-02-23T18:09:51.359Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2025-02-23T18:09:51.359Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2025-02-23T18:09:51.359Z - Time taken for 'total execution time for createProjectGraph()' 37.77389300003415ms
+[NX Daemon Server] - 2025-02-23T18:17:00.645Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2025-02-23T18:17:00.645Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-23T18:17:00.728Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2025-02-23T18:17:00.728Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-23T18:17:00.846Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-23T18:17:00.846Z - [REQUEST]: package.json
+[NX Daemon Server] - 2025-02-23T18:17:00.846Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-23T18:17:00.867Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.867Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.867Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.871Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.872Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.872Z - Handled HASH_GLOB. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2025-02-23T18:17:00.872Z - Time taken for 'hash changed files from watcher' 0.14313600002788007ms
+[NX Daemon Server] - 2025-02-23T18:17:00.876Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.876Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.876Z - Handled GLOB. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.880Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.880Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.880Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.884Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.884Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.885Z - Handled HASH_GLOB. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2025-02-23T18:17:00.891Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.891Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.891Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.895Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.895Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.895Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.900Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.900Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-23T18:17:00.900Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2025-02-23T18:17:00.934Z - Time taken for 'build-project-configs' 70.40258500003256ms
+[NX Daemon Server] - 2025-02-23T18:17:00.964Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-23T18:17:00.964Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-23T18:17:00.964Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-23T18:17:00.965Z - Time taken for 'total execution time for createProjectGraph()' 23.499305000063032ms
