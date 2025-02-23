@@ -1,0 +1,363 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.6",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/next/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "serveStaticTargetName": "serve-static",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "name": "@nx/cypress/plugin",
+      "options": {
+        "targetName": "e2e",
+        "configFile": "cypress.config.ts"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "9422206797336061133"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "8759467486014133886"
+      },
+      {
+        "file": "Dockerfile.backend",
+        "hash": "17707641290880362758"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "985606112782525233"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "Dockerfile.frontend",
+        "hash": "7385235635086431088"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "3143642416999849178"
+      },
+      {
+        "file": "README.md",
+        "hash": "9119692498511767436"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "3462096019013144053"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10402636626331045609"
+      },
+      {
+        "file": ".env.sample",
+        "hash": "13484174469426106050"
+      },
+      {
+        "file": "package.json",
+        "hash": "5413928252752299231"
+      }
+    ],
+    "projectFileMap": {
+      "backend": [
+        {
+          "file": "apps/backend/auth/jwt.go",
+          "hash": "3803644816783581677"
+        },
+        {
+          "file": "apps/backend/config/config.go",
+          "hash": "9902898450391562487"
+        },
+        {
+          "file": "apps/backend/config/systemPrompt.json",
+          "hash": "6101383754736376369"
+        },
+        {
+          "file": "apps/backend/go.mod",
+          "hash": "10175812699598259083"
+        },
+        {
+          "file": "apps/backend/go.sum",
+          "hash": "3491875084086114068"
+        },
+        {
+          "file": "apps/backend/handlers/auth.go",
+          "hash": "9758736934565586328"
+        },
+        {
+          "file": "apps/backend/handlers/query.go",
+          "hash": "14413734145658458741"
+        },
+        {
+          "file": "apps/backend/main.go",
+          "hash": "2113867495095986144"
+        },
+        {
+          "file": "apps/backend/models/chat.go",
+          "hash": "16130918301749445228"
+        },
+        {
+          "file": "apps/backend/models/query.go",
+          "hash": "1620759967172244015"
+        },
+        {
+          "file": "apps/backend/project.json",
+          "hash": "14105198210404718660"
+        },
+        {
+          "file": "apps/backend/services/chat.go",
+          "hash": "17034473909423512349"
+        },
+        {
+          "file": "apps/backend/services/openai.go",
+          "hash": "6361384994129903044"
+        },
+        {
+          "file": "apps/backend/services/secrets.go",
+          "hash": "16838491993307321077"
+        },
+        {
+          "file": "apps/backend/utils/logger.go",
+          "hash": "3744031302280985297"
+        }
+      ],
+      "frontend": [
+        {
+          "file": "apps/frontend/eslint.config.mjs",
+          "hash": "10818484782922660641",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            "npm:@eslint/compat",
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/frontend/index.d.ts",
+          "hash": "5498222895072842432"
+        },
+        {
+          "file": "apps/frontend/jest.config.ts",
+          "hash": "13694262809294735875"
+        },
+        {
+          "file": "apps/frontend/jest.setup.ts",
+          "hash": "16889143470896053329",
+          "deps": [
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/frontend/next-env.d.ts",
+          "hash": "1320675027584673186"
+        },
+        {
+          "file": "apps/frontend/next.config.js",
+          "hash": "5595109290972837397",
+          "deps": [
+            "npm:@nx/next"
+          ]
+        },
+        {
+          "file": "apps/frontend/project.json",
+          "hash": "16582875021070894344"
+        },
+        {
+          "file": "apps/frontend/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/frontend/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/frontend/specs/index.spec.tsx",
+          "hash": "8317118216220057578",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/api/hello/route.ts",
+          "hash": "495073956729887886"
+        },
+        {
+          "file": "apps/frontend/src/app/chat/__mocks__/react-markdown.tsx",
+          "hash": "2477801023956438966",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/chat/layout.tsx",
+          "hash": "12175443385831296615",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/chat/page.spec.tsx",
+          "hash": "396022000739174419",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/chat/page.tsx",
+          "hash": "612724962645820439",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/global.css",
+          "hash": "2063387531564215811"
+        },
+        {
+          "file": "apps/frontend/src/app/layout.tsx",
+          "hash": "13415515203133792280"
+        },
+        {
+          "file": "apps/frontend/src/app/not-found.tsx",
+          "hash": "17749736560437044454"
+        },
+        {
+          "file": "apps/frontend/src/app/page.module.css",
+          "hash": "13200098914600029703"
+        },
+        {
+          "file": "apps/frontend/src/app/page.tsx",
+          "hash": "909907153739497955",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/components/ChatMessage.tsx",
+          "hash": "15215099282301448362",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/components/MessageBubble.tsx",
+          "hash": "3681504494216368557",
+          "deps": [
+            "npm:react",
+            "npm:react-markdown"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/services/api.ts",
+          "hash": "4249210383749554836"
+        },
+        {
+          "file": "apps/frontend/src/styles/Chat.module.css",
+          "hash": "5375210386131748007"
+        },
+        {
+          "file": "apps/frontend/src/styles/ChatLayout.module.css",
+          "hash": "18180362645671422882"
+        },
+        {
+          "file": "apps/frontend/src/styles/ChatMessage.module.css",
+          "hash": "15787088048484096762"
+        },
+        {
+          "file": "apps/frontend/src/styles/MessageBubble.module.css",
+          "hash": "14989794891727823171"
+        },
+        {
+          "file": "apps/frontend/src/types/chat.ts",
+          "hash": "13736484995409036783"
+        },
+        {
+          "file": "apps/frontend/tsconfig.json",
+          "hash": "9569261337523828455"
+        },
+        {
+          "file": "apps/frontend/tsconfig.spec.json",
+          "hash": "13752930008724566565"
+        }
+      ],
+      "frontend-e2e": [
+        {
+          "file": "apps/frontend-e2e/cypress.config.ts",
+          "hash": "11900618588563353694",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/eslint.config.mjs",
+          "hash": "1172734138943286526",
+          "deps": [
+            "npm:eslint-plugin-playwright"
+          ]
+        },
+        {
+          "file": "apps/frontend-e2e/project.json",
+          "hash": "18232327800926907694"
+        },
+        {
+          "file": "apps/frontend-e2e/src/e2e/app.cy.ts",
+          "hash": "11462815020531048596"
+        },
+        {
+          "file": "apps/frontend-e2e/tsconfig.json",
+          "hash": "18107275616570252607"
+        }
+      ]
+    }
+  }
+}
