@@ -1797,6 +1797,15 @@
       "type": "npm",
       "name": "npm:@eslint/js",
       "data": {
+        "version": "9.21.0",
+        "packageName": "@eslint/js",
+        "hash": "sha512-BqStZ3HX8Yz6LvsF5ByXYrtigrV5AXADWLAGc7PH/1SxOb7/FIYYMszZZWiUou/GB9P2lXWk2SV4d+Z8h0nknw=="
+      }
+    },
+    "npm:@eslint/js@9.20.0": {
+      "type": "npm",
+      "name": "npm:@eslint/js@9.20.0",
+      "data": {
         "version": "9.20.0",
         "packageName": "@eslint/js",
         "hash": "sha512-iZA07H9io9Wn836aVTytRaNqh00Sad+EamwOVJT12GTLw1VGMFV/4JaME+JjLtr9fiGaoWgYnS54wrfWsSs4oQ=="
@@ -23938,7 +23947,7 @@
       },
       {
         "source": "npm:eslint",
-        "target": "npm:@eslint/js",
+        "target": "npm:@eslint/js@9.20.0",
         "type": "static"
       },
       {
@@ -33774,5 +33783,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1740321056793
+  "computedAt": 1740333758755
 }
