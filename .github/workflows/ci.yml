@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: production
-      GO_ENV: test # Using test environment for CI
+      GO_ENV: test
       
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,9 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: |
+          npm ci --legacy-peer-deps
+          npm install -g nx@20.4.6
 
       - name: Install Playwright
         run: npx playwright install --with-deps
@@ -36,16 +38,13 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       
       - name: Build and test
-        run: npx nx affected --verbose -t lint test build e2e
+        run: |
+          nx --version
+          nx affected --verbose -t lint test build e2e
 
       - name: Upload artifacts
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: nx-build-artifacts
-          path: |
-            dist/
-            tmp/
-            .nx/
-            **/node_modules/.cache
-            **/.next
+          path: dist
