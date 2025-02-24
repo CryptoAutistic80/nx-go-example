@@ -40,3 +40,4 @@ jobs:
       env:
         NODE_ENV: production
       run: npx nx affected --verbose -t lint test build e2e
+
