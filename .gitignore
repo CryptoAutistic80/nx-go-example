@@ -39,6 +39,7 @@ testem.log
 Thumbs.db
 
 # Nx specific
+.nx
 .nx/cache
 .nx/installation
 !.nx/schema.json

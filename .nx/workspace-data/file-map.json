@@ -37,72 +37,72 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "jest.config.ts",
-        "hash": "3494843969422251966"
-      },
-      {
-        "file": "Dockerfile.backend",
-        "hash": "17707641290880362758"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10402636626331045609"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "985606112782525233"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "17337379314732916728"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "package.json",
-        "hash": "1637564527770596878"
-      },
-      {
-        "file": "Dockerfile.frontend",
-        "hash": "7030463533232243600"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "3143642416999849178"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "3462096019013144053"
-      },
-      {
         "file": ".editorconfig",
         "hash": "5443105041930014821"
-      },
-      {
-        "file": "README.md",
-        "hash": "9119692498511767436"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
       },
       {
         "file": ".env.sample",
         "hash": "13484174469426106050"
       },
       {
-        "file": "package-lock.json",
-        "hash": "5797461130236409694"
+        "file": ".github/workflows/ci.yml",
+        "hash": "3143642416999849178"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "7803012095650886646"
       },
       {
         "file": ".prettierignore",
         "hash": "14688272390704683536"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "Dockerfile.backend",
+        "hash": "17707641290880362758"
+      },
+      {
+        "file": "Dockerfile.frontend",
+        "hash": "7030463533232243600"
+      },
+      {
+        "file": "README.md",
+        "hash": "9119692498511767436"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "985606112782525233"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "3462096019013144053"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10402636626331045609"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "5797461130236409694"
+      },
+      {
+        "file": "package.json",
+        "hash": "1637564527770596878"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
       }
     ],
     "projectFileMap": {
@@ -133,6 +133,68 @@
         {
           "file": "apps/frontend-e2e/tsconfig.json",
           "hash": "18107275616570252607"
+        }
+      ],
+      "backend": [
+        {
+          "file": "apps/backend/auth/jwt.go",
+          "hash": "3803644816783581677"
+        },
+        {
+          "file": "apps/backend/config/config.go",
+          "hash": "9902898450391562487"
+        },
+        {
+          "file": "apps/backend/config/systemPrompt.json",
+          "hash": "6101383754736376369"
+        },
+        {
+          "file": "apps/backend/go.mod",
+          "hash": "10175812699598259083"
+        },
+        {
+          "file": "apps/backend/go.sum",
+          "hash": "3491875084086114068"
+        },
+        {
+          "file": "apps/backend/handlers/auth.go",
+          "hash": "9758736934565586328"
+        },
+        {
+          "file": "apps/backend/handlers/query.go",
+          "hash": "14413734145658458741"
+        },
+        {
+          "file": "apps/backend/main.go",
+          "hash": "2113867495095986144"
+        },
+        {
+          "file": "apps/backend/models/chat.go",
+          "hash": "16130918301749445228"
+        },
+        {
+          "file": "apps/backend/models/query.go",
+          "hash": "1620759967172244015"
+        },
+        {
+          "file": "apps/backend/project.json",
+          "hash": "14105198210404718660"
+        },
+        {
+          "file": "apps/backend/services/chat.go",
+          "hash": "17034473909423512349"
+        },
+        {
+          "file": "apps/backend/services/openai.go",
+          "hash": "6361384994129903044"
+        },
+        {
+          "file": "apps/backend/services/secrets.go",
+          "hash": "16838491993307321077"
+        },
+        {
+          "file": "apps/backend/utils/logger.go",
+          "hash": "3744031302280985297"
         }
       ],
       "frontend": [
@@ -294,68 +356,6 @@
         {
           "file": "apps/frontend/tsconfig.spec.json",
           "hash": "13752930008724566565"
-        }
-      ],
-      "backend": [
-        {
-          "file": "apps/backend/auth/jwt.go",
-          "hash": "3803644816783581677"
-        },
-        {
-          "file": "apps/backend/config/config.go",
-          "hash": "9902898450391562487"
-        },
-        {
-          "file": "apps/backend/config/systemPrompt.json",
-          "hash": "6101383754736376369"
-        },
-        {
-          "file": "apps/backend/go.mod",
-          "hash": "10175812699598259083"
-        },
-        {
-          "file": "apps/backend/go.sum",
-          "hash": "3491875084086114068"
-        },
-        {
-          "file": "apps/backend/handlers/auth.go",
-          "hash": "9758736934565586328"
-        },
-        {
-          "file": "apps/backend/handlers/query.go",
-          "hash": "14413734145658458741"
-        },
-        {
-          "file": "apps/backend/main.go",
-          "hash": "2113867495095986144"
-        },
-        {
-          "file": "apps/backend/models/chat.go",
-          "hash": "16130918301749445228"
-        },
-        {
-          "file": "apps/backend/models/query.go",
-          "hash": "1620759967172244015"
-        },
-        {
-          "file": "apps/backend/project.json",
-          "hash": "14105198210404718660"
-        },
-        {
-          "file": "apps/backend/services/chat.go",
-          "hash": "17034473909423512349"
-        },
-        {
-          "file": "apps/backend/services/openai.go",
-          "hash": "6361384994129903044"
-        },
-        {
-          "file": "apps/backend/services/secrets.go",
-          "hash": "16838491993307321077"
-        },
-        {
-          "file": "apps/backend/utils/logger.go",
-          "hash": "3744031302280985297"
         }
       ]
     }

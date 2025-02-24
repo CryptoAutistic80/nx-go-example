@@ -12670,3 +12670,105 @@ Error: LOCK_FILES_CHANGED
 [NX Daemon Server] - 2025-02-23T18:23:47.121Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2025-02-23T18:23:47.121Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2025-02-23T18:23:47.121Z - Time taken for 'total execution time for createProjectGraph()' 20.31672799983062ms
+[NX Daemon Server] - 2025-02-24T19:33:12.068Z - Started listening on: /tmp/458bf9b6713245adbd63/d.sock
+[NX Daemon Server] - 2025-02-24T19:33:12.072Z - [WATCHER]: Subscribed to changes within: /home/sshiftdao/nx-go-example (native)
+[NX Daemon Server] - 2025-02-24T19:33:12.075Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-24T19:33:12.075Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-24T19:33:12.077Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-24T19:33:12.078Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-24T19:33:12.310Z - Time taken for 'Load Nx Plugin: /home/sshiftdao/nx-go-example/node_modules/nx/src/plugins/js' 226.927526ms
+[NX Daemon Server] - 2025-02-24T19:33:12.319Z - Time taken for 'Load Nx Plugin: /home/sshiftdao/nx-go-example/node_modules/nx/src/plugins/package-json' 236.23930899999996ms
+[NX Daemon Server] - 2025-02-24T19:33:12.319Z - Time taken for 'loadDefaultNxPlugins' 237.229248ms
+[NX Daemon Server] - 2025-02-24T19:33:12.363Z - Time taken for 'Load Nx Plugin: @nx/jest/plugin' 281.928963ms
+[NX Daemon Server] - 2025-02-24T19:33:12.369Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 288.10382500000003ms
+[NX Daemon Server] - 2025-02-24T19:33:12.436Z - Time taken for 'Load Nx Plugin: @nx/next/plugin' 356.62064100000003ms
+[NX Daemon Server] - 2025-02-24T19:33:12.437Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-24T19:33:12.437Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-24T19:33:12.437Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-24T19:33:12.461Z - Time taken for 'loadSpecifiedNxPlugins' 357.756405ms
+[NX Daemon Server] - 2025-02-24T19:33:12.463Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-24T19:33:12.464Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-02-24T19:33:12.465Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-24T19:33:12.465Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-02-24T19:33:12.465Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-24T19:33:12.466Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-02-24T19:33:12.470Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.470Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.471Z - Handled HASH_GLOB. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2025-02-24T19:33:12.471Z - Established a connection. Number of open connections: 4
+[NX Daemon Server] - 2025-02-24T19:33:12.473Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.474Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.474Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2025-02-24T19:33:12.474Z - Established a connection. Number of open connections: 5
+[NX Daemon Server] - 2025-02-24T19:33:12.475Z - Closed a connection. Number of open connections: 4
+[NX Daemon Server] - 2025-02-24T19:33:12.475Z - Established a connection. Number of open connections: 5
+[NX Daemon Server] - 2025-02-24T19:33:12.477Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.478Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.478Z - Handled GLOB. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2025-02-24T19:33:12.478Z - Established a connection. Number of open connections: 6
+[NX Daemon Server] - 2025-02-24T19:33:12.479Z - Closed a connection. Number of open connections: 5
+[NX Daemon Server] - 2025-02-24T19:33:12.485Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.485Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.485Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:12.668Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.669Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.669Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2025-02-24T19:33:12.671Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.672Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.672Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2025-02-24T19:33:12.675Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.675Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.675Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:12.678Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.678Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2025-02-24T19:33:12.678Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:13.802Z - Time taken for 'build-project-configs' 1331.4681810000002ms
+[NX Daemon Server] - 2025-02-24T19:33:13.839Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-24T19:33:13.840Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-24T19:33:13.841Z - Time taken for 'total for creating and serializing project graph' 1761.3718529999999ms
+[NX Daemon Server] - 2025-02-24T19:33:13.842Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-24T19:33:13.842Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1762. Response time: 2.
+[NX Daemon Server] - 2025-02-24T19:33:13.873Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2025-02-24T19:33:13.873Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2025-02-24T19:33:13.873Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:14.204Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX Daemon Server] - 2025-02-24T19:33:14.204Z - Done responding to the client handleRunPreTasksExecution
+[NX Daemon Server] - 2025-02-24T19:33:14.204Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:14.204Z - Time taken for 'preTasksExecution' 0.43515800000022864ms
+[NX Daemon Server] - 2025-02-24T19:33:14.242Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-24T19:33:14.242Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-24T19:33:14.242Z - Handled HASH_TASKS. Handling time: 12. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:15.289Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-02-24T19:33:15.289Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-02-24T19:33:15.290Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 1. Response time: 1.
+Was not able to require.resolve module nx/src/utils/app-root from the following paths: /home/sshiftdao/nx-go-example/node_modules/nx/node_modules,/home/sshiftdao/nx-go-example/node_modules. This may be expected.
+Was not able to require.resolve module nx/src/utils/app-root from the following paths: /home/sshiftdao/nx-go-example/node_modules/nx/node_modules,/home/sshiftdao/nx-go-example/node_modules. This may be expected.
+[NX Daemon Server] - 2025-02-24T19:33:15.429Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2025-02-24T19:33:15.429Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX Daemon Server] - 2025-02-24T19:33:15.429Z - Handled PROCESS_IN_BACKGROUND. Handling time: 114. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:15.431Z - Uploading file artifacts
+[NX Daemon Server] - 2025-02-24T19:33:15.431Z - Done uploading file artifacts
+[NX Daemon Server] - 2025-02-24T19:33:15.431Z - Sending EndRun request
+[Nx Cloud Debug] Attempting to acquire filesystem lock with path:  /tmp/client-instance-id.lock
+[Nx Cloud Debug] Failed to create folder lock at path: /tmp/client-instance-id.lock
+[Nx Cloud] Unable to detect a VCS context from the environment.
+[NX Daemon Server] - 2025-02-24T19:33:15.435Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX Daemon Server] - 2025-02-24T19:33:15.435Z - Done responding to the client handleRunPostTasksExecution
+[NX Daemon Server] - 2025-02-24T19:33:15.435Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-02-24T19:33:15.435Z - Time taken for 'postTasksExecution' 0.21076200000015888ms
+
+ NX   RunEnd. Completed tasks
+
+
+[]
+
+[NX Daemon Server] - 2025-02-24T19:33:15.508Z - Closed a connection. Number of open connections: 4
+
+ NX   Connection to Nx Cloud failed with status code 401
+
+This workspace is more than three days old and is not connected. Workspaces must be connected within 3 days of creation. Claim your workspace at https://cloud.nx.app.
+
+[NX Daemon Server] - 2025-02-24T19:33:15.713Z - Error when sending EndRun
+Error: This workspace is more than three days old and is not connected. Workspaces must be connected within 3 days of creation. Claim your workspace at https://cloud.nx.app
+    at Timeout._onTimeout (/home/sshiftdao/nx-go-example/.nx/cache/cloud/2502.19.1.hotfix1/lib/daemon/process-run-end.js:1:907175)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
