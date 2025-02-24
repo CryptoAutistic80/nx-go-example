@@ -13982,75 +13982,9 @@
         "source": "frontend-e2e",
         "target": "backend",
         "type": "implicit"
-      },
-      {
-        "source": "frontend-e2e",
-        "target": "npm:cypress",
-        "type": "static"
-      },
-      {
-        "source": "frontend-e2e",
-        "target": "npm:@nx/cypress",
-        "type": "static"
-      },
-      {
-        "source": "frontend-e2e",
-        "target": "npm:eslint-plugin-playwright",
-        "type": "static"
       }
     ],
-    "frontend": [
-      {
-        "source": "frontend",
-        "target": "npm:@eslint/eslintrc",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@eslint/js",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@eslint/compat",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@nx/eslint-plugin",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@testing-library/jest-dom",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@nx/next",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:@testing-library/react",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:next",
-        "type": "static"
-      },
-      {
-        "source": "frontend",
-        "target": "npm:react-markdown",
-        "type": "static"
-      }
-    ],
+    "frontend": [],
     "backend": [],
     "npm:@ampproject/remapping": [
       {
@@ -33783,5 +33717,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1740425593827
+  "computedAt": 1740426372589
 }

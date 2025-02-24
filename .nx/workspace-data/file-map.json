@@ -34,93 +34,91 @@
       }
     }
   ],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".env.sample",
-        "hash": "13484174469426106050"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "3143642416999849178"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "7803012095650886646"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
       },
       {
         "file": ".prettierrc",
         "hash": "16267754514737964994"
       },
       {
-        "file": "Dockerfile.backend",
-        "hash": "17707641290880362758"
-      },
-      {
-        "file": "Dockerfile.frontend",
-        "hash": "7030463533232243600"
-      },
-      {
-        "file": "README.md",
-        "hash": "9119692498511767436"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "985606112782525233"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "3462096019013144053"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3494843969422251966"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10402636626331045609"
-      },
-      {
         "file": "package-lock.json",
         "hash": "5797461130236409694"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
       },
       {
         "file": "package.json",
         "hash": "1637564527770596878"
       },
       {
+        "file": "README.md",
+        "hash": "9119692498511767436"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "7803012095650886646"
+      },
+      {
+        "file": "Dockerfile.backend",
+        "hash": "17707641290880362758"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
         "file": "tsconfig.base.json",
         "hash": "16936441711144470533"
+      },
+      {
+        "file": "Dockerfile.frontend",
+        "hash": "7030463533232243600"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "3143642416999849178"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "985606112782525233"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4647065924150220512"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "3462096019013144053"
+      },
+      {
+        "file": ".env.sample",
+        "hash": "13484174469426106050"
       }
     ],
     "projectFileMap": {
       "frontend-e2e": [
         {
           "file": "apps/frontend-e2e/cypress.config.ts",
-          "hash": "11900618588563353694",
-          "deps": [
-            "npm:cypress",
-            "npm:@nx/cypress"
-          ]
+          "hash": "11900618588563353694"
         },
         {
           "file": "apps/frontend-e2e/eslint.config.mjs",
-          "hash": "1172734138943286526",
-          "deps": [
-            "npm:eslint-plugin-playwright"
-          ]
+          "hash": "1172734138943286526"
         },
         {
           "file": "apps/frontend-e2e/project.json",
@@ -200,13 +198,7 @@
       "frontend": [
         {
           "file": "apps/frontend/eslint.config.mjs",
-          "hash": "10818484782922660641",
-          "deps": [
-            "npm:@eslint/eslintrc",
-            "npm:@eslint/js",
-            "npm:@eslint/compat",
-            "npm:@nx/eslint-plugin"
-          ]
+          "hash": "10818484782922660641"
         },
         {
           "file": "apps/frontend/index.d.ts",
@@ -218,10 +210,7 @@
         },
         {
           "file": "apps/frontend/jest.setup.ts",
-          "hash": "16889143470896053329",
-          "deps": [
-            "npm:@testing-library/jest-dom"
-          ]
+          "hash": "16889143470896053329"
         },
         {
           "file": "apps/frontend/next-env.d.ts",
@@ -229,10 +218,7 @@
         },
         {
           "file": "apps/frontend/next.config.js",
-          "hash": "5595109290972837397",
-          "deps": [
-            "npm:@nx/next"
-          ]
+          "hash": "5595109290972837397"
         },
         {
           "file": "apps/frontend/project.json",
@@ -248,12 +234,7 @@
         },
         {
           "file": "apps/frontend/specs/index.spec.tsx",
-          "hash": "8317118216220057578",
-          "deps": [
-            "npm:react",
-            "npm:@testing-library/react",
-            "npm:next"
-          ]
+          "hash": "8317118216220057578"
         },
         {
           "file": "apps/frontend/src/app/api/hello/route.ts",
@@ -261,31 +242,19 @@
         },
         {
           "file": "apps/frontend/src/app/chat/__mocks__/react-markdown.tsx",
-          "hash": "2477801023956438966",
-          "deps": [
-            "npm:react"
-          ]
+          "hash": "2477801023956438966"
         },
         {
           "file": "apps/frontend/src/app/chat/layout.tsx",
-          "hash": "12175443385831296615",
-          "deps": [
-            "npm:next"
-          ]
+          "hash": "12175443385831296615"
         },
         {
           "file": "apps/frontend/src/app/chat/page.spec.tsx",
-          "hash": "396022000739174419",
-          "deps": [
-            "npm:@testing-library/react"
-          ]
+          "hash": "396022000739174419"
         },
         {
           "file": "apps/frontend/src/app/chat/page.tsx",
-          "hash": "612724962645820439",
-          "deps": [
-            "npm:react"
-          ]
+          "hash": "612724962645820439"
         },
         {
           "file": "apps/frontend/src/app/global.css",
@@ -305,25 +274,15 @@
         },
         {
           "file": "apps/frontend/src/app/page.tsx",
-          "hash": "909907153739497955",
-          "deps": [
-            "npm:next"
-          ]
+          "hash": "909907153739497955"
         },
         {
           "file": "apps/frontend/src/components/ChatMessage.tsx",
-          "hash": "15215099282301448362",
-          "deps": [
-            "npm:react"
-          ]
+          "hash": "15215099282301448362"
         },
         {
           "file": "apps/frontend/src/components/MessageBubble.tsx",
-          "hash": "3681504494216368557",
-          "deps": [
-            "npm:react",
-            "npm:react-markdown"
-          ]
+          "hash": "3681504494216368557"
         },
         {
           "file": "apps/frontend/src/services/api.ts",
